@@ -8,7 +8,8 @@ RSpec.describe Dictionary do
     @dictionary = Dictionary.new
   end
 
-  it "exists" do
+  it "exists and has attributes" do
     expect(@dictionary).to be_a Dictionary
+    expect(@dictionary.braille_alphabet.class).to eq(Hash) 
   end
 end
