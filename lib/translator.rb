@@ -5,6 +5,15 @@ class Translator < Dictionary
     @message_reader = message_reader
   end
 
+  # def character_split
+  #   message_chunks = @message_array.each_slice(40).map(&:join)
+  #   dictionary = Dictionary.new
+  #   message_chunks.each do |chunk|
+  #     @letter_string << chunk.split("")
+  #   end
+  #   braille_array
+  # end
+
   def translate
     message_array = @message_reader.split("")
     dictionary = Dictionary.new
@@ -25,4 +34,7 @@ class Translator < Dictionary
     "#{column1.join}\n#{column2.join}\n#{column3.join}\n"
   end
 
+  # def character split
+  #   formater.char_length.each_slice(40).map(&:join).join
+  # end
 end
