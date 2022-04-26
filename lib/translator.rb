@@ -27,4 +27,7 @@ class Translator
     "#{column1.join}\n#{column2.join}\n#{column3.join}\n"
   end
 
+  def character_split
+    formater.char_length.each_slice(40).map(&:join).join
+  end
 end
