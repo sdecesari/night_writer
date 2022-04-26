@@ -4,12 +4,16 @@ require './lib/dictionary'
 require './lib/translator'
 require 'pry'
 
-RSpec.describe translator do
+RSpec.describe Translator do
   before :each do
-    @translator = Translator.new
+    @translator = Translator.new(@message_reader)
   end
 
-  it "exists" do
-    expect(@translator).to be_a Translator
+  it "exists and attributes" do
+    translator = Translator.new(message_reader)
+    expect(translator).to be_a Translator
+    expect(translator.message_reader).to eq message_reader
+    expect(translator.char_length).to eq
   end
+
 end
