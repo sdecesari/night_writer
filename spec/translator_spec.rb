@@ -16,4 +16,8 @@ RSpec.describe Translator do
     expect(translator.char_length).to eq
   end
 
+  it "can translate alphabet to braille" do
+    expect(@translator.translate("a")).to eq ["0.", "..", ".."]
+  end
+
 end
