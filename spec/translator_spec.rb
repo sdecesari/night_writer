@@ -10,10 +10,8 @@ RSpec.describe Translator do
   end
 
   it "exists and attributes" do
-    # translator = Translator.new("message.txt", "braille.txt")
     expect(@translator).to be_a Translator
-  #   expect(@translator.message_reader).to eq message_reader
-  #   expect(@translator.char_length).to eq
+    expect(@translator.message_reader).to eq message_reader
   end
 
   it "can translate alphabet to braille" do
