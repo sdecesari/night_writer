@@ -20,4 +20,8 @@ RSpec.describe Translator do
     expect(@translator.translate("a")).to eq ["0.", "..", ".."]
   end
 
+  it 'can format braille' do
+    expect(translator.formater).to eq
+  end
+
 end
